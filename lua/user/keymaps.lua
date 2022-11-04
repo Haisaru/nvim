@@ -1,13 +1,12 @@
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+--local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 -- Modes
 --   normal_mode = "n",
@@ -67,4 +66,5 @@ keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
-
+--Trouble
+keymap("n", "<leader>le", ":TroubleToggle <CR>", opts)
