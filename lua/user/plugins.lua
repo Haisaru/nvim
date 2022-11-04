@@ -93,8 +93,12 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
 
   --latex
-  use 'lervag/vimtex'
+  use "lervag/vimtex"
 
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "ravenxrz/DAPInstall.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
