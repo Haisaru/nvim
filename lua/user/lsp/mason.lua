@@ -10,6 +10,7 @@ local servers = {
 	"yamlls",
   "clangd",
   "texlab",
+  "omnisharp",
 }
 
 local settings = {
