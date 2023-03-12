@@ -1,4 +1,7 @@
-local ls = require("luasnip")
+local ls_status_ok, ls = pcall(require, "luasnip")
+if not ls_status_ok then
+  return
+end
 local s = ls.snippet
 local sn = ls.snippet_node
 local isn = ls.indent_snippet_node
@@ -40,7 +43,7 @@ ls.add_snippets("tex", {
         t("\\frac{\\partial "), i(1, "f"), t("}{\\partial "), i(2, "x"), t("}"), i(0)
   }),
   s({
-    trig = "\\\\ ",
+    trig = "// ",
     namr = "fraction",
     dscr = "write a fraction",
   }, {

@@ -36,6 +36,3 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.iskeyword:append "c"
 vim.cmd "set whichwrap+=<,>,[,]"
 
-
-
-

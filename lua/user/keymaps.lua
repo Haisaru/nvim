@@ -67,7 +67,7 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 --Trouble
-keymap("n", "<leader>le", ":TroubleToggle <CR>", opts)
+keymap("n", "<leader>lt", ":TroubleToggle <CR>", opts)
 
 -- DAP
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
