@@ -48,6 +48,7 @@ return packer.startup(function(use)
 
   --Colour Scheme
   use {'pineapplegiant/spaceduck', branch = 'main'}
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'folke/tokyonight.nvim'
 
   --NvimTree
