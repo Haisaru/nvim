@@ -13,7 +13,7 @@ configs.setup({
         "javascript",
         "jsdoc",
         "jsonc",
-		"latex"
+		"latex",
         "lua",
         "markdown",
 		"python",
