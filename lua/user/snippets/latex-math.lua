@@ -27,11 +27,14 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
+ls.setup({enable_autosnippets = true})
+
 ls.add_snippets("tex", {
   s({
     trig = "mk",
     namr = "Math Inline",
     dscr = "Inline mathmode",
+    snippetType="autosnippet",
   }, {
         t("$"), i(1, ""), t("$"), i(0)
   }),
