@@ -29,7 +29,7 @@ local parse = require("luasnip.util.parser").parse_snippet
 
 ls.setup({enable_autosnippets = true})
 
-ls.add_snippets("tex", {
+ls.add_snippets("all", {
   s({
     trig = "mk",
     namr = "Math Inline",
