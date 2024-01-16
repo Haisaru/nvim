@@ -67,7 +67,7 @@ cmp.setup { snippet = {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if luasnip.expandable() then
         luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
+      elseif luasnip.expand_or_locally_jumpable() then
         luasnip.expand_or_jump()
       elseif cmp.visible() then
         cmp.select_next_item()
@@ -110,9 +110,9 @@ cmp.setup { snippet = {
     end,
   },
   sources = {
+    { name = "luasnip" },
     { name = "nvim_lsp"},
     { name = "nvim_lua"},
-    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
   },

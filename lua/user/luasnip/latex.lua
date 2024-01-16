@@ -2,6 +2,7 @@ local ls_status_ok, ls = pcall(require, "luasnip")
 if not ls_status_ok then
   return
 end
+
 local s = ls.snippet
 local sn = ls.snippet_node
 local isn = ls.indent_snippet_node
@@ -27,16 +28,30 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
-ls.setup({enable_autosnippets = true})
-
-ls.add_snippets("all", {
+ls.add_snippets("tex", {
   s({
     trig = "mk",
-    namr = "Math Inline",
+    namr = "Inline Math",
     dscr = "Inline mathmode",
     snippetType="autosnippet",
   }, {
         t("$"), i(1, ""), t("$"), i(0)
+  }),
+  s({
+    trig = "dm",
+    namr = "Display Math",
+    dscr = "Display mathmode",
+    snippetType="autosnippet",
+  }, {
+        t("\\["), i(1, ""), t("\\]"), i(0)
+  }),
+  s({
+    trig = "lr{",
+    namr = "Set Brackets",
+    dscr = "Left and right set brackets",
+    snippetType="autosnippet",
+  }, {
+        t("\\{"), i(1, ""), t("\\}"), i(0)
   }),
   s({
     trig = "pd",
@@ -46,9 +61,12 @@ ls.add_snippets("all", {
         t("\\frac{\\partial "), i(1, "f"), t("}{\\partial "), i(2, "x"), t("}"), i(0)
   }),
   s({
-    trig = "// ",
+    trig = "//",
+    regtrig = true,
+    wordtrig = false,
     namr = "fraction",
     dscr = "write a fraction",
+    snippetType="autosnippet",
   }, {
         t("\\frac{"), i(1, "a"), t("}{"), i(2, "b"), t("}"), i(0)
   }),
