@@ -11,7 +11,12 @@ local servers = {
   "clangd",
   "texlab",
   "omnisharp",
+  "tailwindcss",
 }
+
+-- Add language server here if you are working with a new language/ framework
+-- Find names of servers here https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
+-- write the names from the LEFT column
 
 local settings = {
 	ui = {
