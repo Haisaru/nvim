@@ -1,3 +1,8 @@
+--[[
+To install a language server use :Mason
+To intsall a null-ls source, write it into null-ls.lua and install in :Mason
+--]]
+
 return {
   {
     "williamboman/mason.nvim",

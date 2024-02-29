@@ -13,8 +13,8 @@ return {
       sources = {
         formatting.stylua,
         formatting.black,
-        formatting.prettier.with({ timeout = 20000 }),
         formatting.prettierd,
+        formatting.rustywind,
         completion.luasnip,
         completion.spell,
       },
