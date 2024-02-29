@@ -1,7 +1,4 @@
-local ls_status_ok, ls = pcall(require, "luasnip")
-if not ls_status_ok then
-  return
-end
+local ls = require("luasnip")
 
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -33,32 +30,46 @@ ls.add_snippets("tex", {
     trig = "mk",
     namr = "Inline Math",
     dscr = "Inline mathmode",
-    snippetType="autosnippet",
+    snippetType = "autosnippet",
   }, {
-        t("$"), i(1, ""), t("$"), i(0)
+    t("$"),
+    i(1, ""),
+    t("$"),
+    i(0),
   }),
   s({
     trig = "dm",
     namr = "Display Math",
     dscr = "Display mathmode",
-    snippetType="autosnippet",
+    snippetType = "autosnippet",
   }, {
-        t("\\["), i(1, ""), t("\\]"), i(0)
+    t("\\["),
+    i(1, ""),
+    t("\\]"),
+    i(0),
   }),
   s({
     trig = "lr{",
     namr = "Set Brackets",
     dscr = "Left and right set brackets",
-    snippetType="autosnippet",
+    snippetType = "autosnippet",
   }, {
-        t("\\{"), i(1, ""), t("\\}"), i(0)
+    t("\\{"),
+    i(1, ""),
+    t("\\}"),
+    i(0),
   }),
   s({
     trig = "pd",
     namr = "Partial Derivative",
     dscr = "Partial Derivative of of a function",
   }, {
-        t("\\frac{\\partial "), i(1, "f"), t("}{\\partial "), i(2, "x"), t("}"), i(0)
+    t("\\frac{\\partial "),
+    i(1, "f"),
+    t("}{\\partial "),
+    i(2, "x"),
+    t("}"),
+    i(0),
   }),
   s({
     trig = "//",
@@ -66,8 +77,13 @@ ls.add_snippets("tex", {
     wordtrig = false,
     namr = "fraction",
     dscr = "write a fraction",
-    snippetType="autosnippet",
+    snippetType = "autosnippet",
   }, {
-        t("\\frac{"), i(1, "a"), t("}{"), i(2, "b"), t("}"), i(0)
+    t("\\frac{"),
+    i(1, "a"),
+    t("}{"),
+    i(2, "b"),
+    t("}"),
+    i(0),
   }),
 })
