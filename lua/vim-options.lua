@@ -11,3 +11,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.loader.enable()
+
+vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>", { silent = true })
