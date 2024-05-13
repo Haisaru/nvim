@@ -34,6 +34,8 @@ return {
       "rafamadriz/friendly-snippets",
     },
     config = function()
+      -- to see filetype run :lua print(vim.inspect(require("luasnip").get_snippet_filetypes()))
+      require("snippets.markdown")
       require("snippets.latex")
       require("luasnip").setup({
         enable_autosnippets = true,

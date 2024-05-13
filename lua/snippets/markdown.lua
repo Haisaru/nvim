@@ -25,7 +25,7 @@ local postfix = require("luasnip.extras.postfix").postfix
 local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 
-ls.add_snippets("tex", {
+ls.add_snippets("markdown", {
 	s({
 		trig = "mk",
 		namr = "Inline Math",
