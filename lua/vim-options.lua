@@ -15,3 +15,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.loader.enable()
 
 vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>", { silent = true })
+
+vim.g.plenary_curl_bin_path = "C:\\Users\\jason\\AppData\\Local\\Microsoft\\WinGet\\Links\\curl.exe"

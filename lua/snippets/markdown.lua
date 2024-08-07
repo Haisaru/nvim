@@ -43,9 +43,9 @@ ls.add_snippets("markdown", {
 		dscr = "Display mathmode",
 		snippetType = "autosnippet",
 	}, {
-		t("\\["),
+		t("$$"),
 		i(1, ""),
-		t("\\]"),
+		t("$$"),
 		i(0),
 	}),
 	s({

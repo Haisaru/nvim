@@ -31,12 +31,15 @@ return {
     "L3MON4D3/LuaSnip",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
-      "rafamadriz/friendly-snippets",
     },
     config = function()
-      -- to see filetype run :lua print(vim.inspect(require("luasnip").get_snippet_filetypes()))
+      -- to see filetype run
+      -- :lua print(vim.inspect(require("luasnip").get_snippet_filetypes()))
+      -- add personal snippets
       require("snippets.markdown")
       require("snippets.latex")
+      require("snippets.cpp")
+
       require("luasnip").setup({
         enable_autosnippets = true,
         store_selection_keys = "<Tab>",
@@ -63,7 +66,6 @@ return {
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-      require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.setup({
         snippet = {
