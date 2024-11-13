@@ -29,7 +29,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 			mason_lspconfig.setup({
-				ensure_installed = { "lua_ls", "jsonls", "tsserver" },
+				ensure_installed = { "lua_ls", "jsonls" },
 				automatic_installation = true,
 				handlers = {
 					function(server_name)
